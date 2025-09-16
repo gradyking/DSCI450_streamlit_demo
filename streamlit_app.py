@@ -4,7 +4,8 @@ import tempfile
 
 st.write("Gemini API GUI")
 
-api_key = st.text_input("Google AI Studio API key", '1NS3RTAP1K3YH3R3T0TZW0NT5TEALY0URT0K3NZ')
+# api_key = st.text_input("Google AI Studio API key", '1NS3RTAP1K3YH3R3T0TZW0NT5TEALY0URT0K3NZ')
+api_key = st.secrets["GKINGAPI"]
 picture = st.camera_input("Take a picture")
 text = st.text_input("Gemini text prompt", "Can you identify what is in this picture?")
 
@@ -25,3 +26,4 @@ if picture:
         )
 
         st.write(response.text)
+ 
